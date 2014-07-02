@@ -1,0 +1,22 @@
+
+* { font-family: verdana,geneva,sans-serif; }
+
+#main {width:800px; height:auto}
+
+#titleimg {
+	width:60px; height:60px;vertical-align: middle;
+	-webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent),
+	color-stop(0.75, transparent), to(rgba(255, 255, 255, 0.4))) 0 0 0 0 stretch stretch;
+}
+
+#titletext { font-size:20px; vertical-align:middle;}
+#main { position:absolute; margin-top:40px}
+#defaultopener {position:absolute; margin-top:30px}
+#metakeys-text {position:absolute; margin-top:200px}
+#metakeys {position:absolute; margin-top:200px; margin-left:500px}
+
+#keys {position:absolute; margin-top:370px;}
+
+#hint-title, #metakeys-title, #keys-title, #hotkey {height:22px;font-size:17px;}
+#hotkey-description, #defaultopener-description, #keys-description {font-size:11px;}
+#metakeys-description {position:absolute; margin-top:6px; width:800px; font-size:11px;}
