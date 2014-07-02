@@ -1,103 +1,99 @@
 <html>
+  <head>
+    <title>Keyboard Mode Optionen</title>
+    <link rel="stylesheet" type="text/css" href="options.css">
+  </head>
+  <body>
+    <div id="header">
+	<img alt="icon" src="icon.png" id="titleimg" />
+	<span id="titletext">Keyboard Mode Optionen<span/>
+    </div>
+    <div id="main">
+	<div id="hotkey">
+	  <span>Link-Hints aufrufen Tastenkombination:<span/>
+	  <input name="strg" type="checkbox" value="strg" onclick="toggleradio('keystrg')" /> Strg + 
+	  <input name="alt" type="checkbox" value="alt" /> Alt + 
+	  <input name="shift" type="checkbox" value="shift" /> Shift + 
+	  <input maxlength="1" name="keycode" size="1" type="text" />
+	</div>
+	<div>
+	  <span id="hotkey-description">(dr&uuml;cken Sie die ausgew&auml;hlte Tastenkombination um die Link-hints aufzurufen)<span/>
+	</div>
 
-	<body>
-		<h3 style="color: blue;">
-			<span style="color:#000000;"><img alt="" src="icon.png" style="width: 60px; height: 60px; float: left;" /></span></h3>
-		<table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 500px; height: 60px">
-			<tbody>
-				<tr>
-					<td>
-						<h3 style="color: blue;">
-							<span style="font-family:verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);"><span style="font-size: 18px;">Keyboard Surfer Optionen</span></span></span></h3>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-		<br><br><br>
-		<p>
-			<span style="font-size:16px;"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);">Link-Hints aufrufen Tastenkombination: <input name="Strg" type="radio" value="strg" />Strg &nbsp; + <input checked="checked" name="Alt" type="radio" value="alt" />Alt&nbsp;&nbsp; + <input name="Shift" type="radio" value="shift" />Shift + <input maxlength="1" name="keycode" size="1" type="text" /></span></span></span></p>
-			<span style="font-size:11px;"><span style="color: rgb(0, 0, 0);"><span style="font-family: verdana,geneva,sans-serif;">(dr&uuml;cken Sie die ausgew&auml;hlte Tastenkombination um die Link-hints aufzurufen)</span></span></span></span></p>
-		<br>
-		<p>
-			<span style="font-size:16px;"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);">Link standartm&auml;ssig &ouml;ffnen:</span></span></span></p>
-		<table align="left" border="0" cellpadding="1" cellspacing="1" style="width: 500px;">
-			<tbody>
-				<tr>
-					<td>
-						<span style="font-size:16px;"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);"><input name="follow" type="radio" />Link folgen</span></span></span></td>
-				</tr>
-				<tr>
-					<td>
-						<span style="font-size:16px;"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);"><input name="Link in Tab öffnen" type="radio" />Link in neuen Tab &ouml;ffnen</span></span></span></span></span></td>
-				</tr>
-				<tr>
-					<td>
-						<span style="font-size:16px;"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);"><input name="backgroundtab" type="radio" />Link in Hintergrundtab &ouml;ffnen</span></span></span></td>
-				</tr>
-				<tr>
-					<td>
-						<span style="font-size:16px;"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);"><input name="icognitotab" type="radio" />Link in Icognito-Tab &ouml;ffnen</span></span></span></td>
-				</tr>
-				<tr>
-					<td>
-						<span style="font-size:16px;"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);"><input name="incognitobackground" type="radio" />Link in Hintergrund-Incognito-Tab &ouml;ffnen</span></span></span></td>
-				</tr>
-			</tbody>
-		</table>
-		<p>
-			&nbsp;</p>
-		<p>
-			&nbsp;</p>
-		<p>
-			&nbsp;</p>
-			<span style="font-size:16px;"><span style="font-size:11px;"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);"><span style="font-family: verdana,geneva,sans-serif;">(der Link wird bei erfolgter eingabe des link-hints im ausgew&auml;hlten modus ge&ouml;ffnet)</span></span></span></span></span></p>
-		<table align="left" border="0" cellpadding="1" cellspacing="1" height="311" style="height: 20px;" width="786">
-			<tbody>
-				<tr>
-					<td>
-						<span style="font-size:16px;"><span style="font-family: verdana,geneva,sans-serif;"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);">Link folgen Meta-Taste:</span></span></span></span></td>
-					<td>
-						<span style="font-size:16px;"><span style="font-family: verdana,geneva,sans-serif;"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);"><input name="Strg" type="radio" value="strg" />Strg &nbsp;&nbsp; <input checked="checked" name="Alt" type="radio" value="alt" />Alt&nbsp;&nbsp;&nbsp; <input name="Shift" type="radio" value="shift" />Shift</span></span></span></span></td>
-				</tr>
-				<tr>
-					<td>
-						<span style="font-size:16px;"><span style="font-family: verdana,geneva,sans-serif;"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);">Link in neuen Tab Meta-Taste:</span></span></span></span></td>
-					<td>
-						<span style="font-size:16px;"><span style="font-family: verdana,geneva,sans-serif;"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);"><input name="Strg" type="radio" value="strg" />Strg &nbsp;&nbsp; <input checked="checked" name="Alt" type="radio" value="alt" />Alt&nbsp;&nbsp;&nbsp; <input name="Shift" type="radio" value="shift" />Shift</span></span></span></span></td>
-				</tr>
-				<tr>
-					<td>
-						<span style="font-size:16px;"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);">Link in Hintergrundtab aufrufen Meta-Taste:</span></span></span></td>
-					<td>
-						<span style="font-size:16px;"><span style="font-family: verdana,geneva,sans-serif;"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);"><input name="Strg" type="radio" value="strg" />Strg &nbsp;&nbsp; <input checked="checked" name="Alt" type="radio" value="alt" />Alt&nbsp;&nbsp;&nbsp; <input name="Shift" type="radio" value="shift" />Shift</span></span></span></span></td>
-				</tr>
-				<tr>
-					<td>
-						<span style="font-size:16px;"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);">Link in Incognitotab aufrufen Meta-Taste:</span></span></span></td>
-					<td>
-						<span style="font-size:16px;"><span style="font-family: verdana,geneva,sans-serif;"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);"><input name="Strg" type="radio" value="strg" />Strg &nbsp;&nbsp; <input checked="checked" name="Alt" type="radio" value="alt" />Alt&nbsp;&nbsp;&nbsp; <input name="Shift" type="radio" value="shift" />Shift</span></span></span></span></td>
-				</tr>
-			</tbody>
-		</table>
-		<p>
-			<span style="font-size:16px;"><span style="font-family: verdana,geneva,sans-serif;"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);">&nbsp;</span></span></span></span></p>
-		<p>
-			&nbsp;</p>
-		<p>
-			&nbsp;</p>
-		<p>
-			&nbsp;</p>
-		<p>
-			<span style="font-size:11px;"><span style="color: rgb(0, 0, 0);">(der Link wird bei d&uuml;rcken der ausgew&auml;hlten Taste und des Link hints im jeweiligen Modus ge&ouml;ffnet)</span></span></p>
-		<p>
-			&nbsp;</p>
-		<p>
-			<span style="font-size:16px;"><span style="font-family: verdana,geneva,sans-serif;"><span style="color: rgb(0, 0, 0);">Link-hint Zeichen: <input name="characters" size="15" type="text" /></span></span></span></p>
-		<p>
-			<span style="font-size:11px;"><span style="color: rgb(0, 0, 0);">(die eingegebenen Zeichen werden f&uuml;r die Erstellung der Link-Hints verwendet)</span></span></p>
-		<p>
-			&nbsp;</p>
-		<p>
-			&nbsp;</p>
-	</body>
+	<div id="defaultopener">
+	  <div id="hint-title">
+	    <span>Link-Hint Standartverhalten:<span/><br>
+	  </div>
+	  <input name="defaultopen" type="radio" value="follow">Link im selben Tab &ouml;ffnen<br>
+	  <input name="defaultopen" type="radio" value="newtab">Link in neuen Tab &ouml;ffnen<br>
+	  <input name="defaultopen" type="radio" value="newbacktab">Link in neuen Hintergrund-Tab &ouml;ffnen<br>
+	  <input name="defaultopen" type="radio" value="incognito">Link in Incognito-Tab &ouml;ffnen<br>
+	  <input name="defaultopen" type="radio" value="backincognito">Link in Hintergrund-Incognito-Tab &ouml;ffnen<br>
+	  <span id="defaultopener-description">(der Link wird bei erfolgter Eingabe des Link-hints im ausgew&auml;hlten modus ge&ouml;ffnet)<span/>
+	</div>
+
+	<div id="metakeys-text">
+	  <div id="metakeys-title">
+	    <span id="meta-title">Link &ouml;ffnen Meta-Taste:<span/><br>
+	  </div>
+	  <span>Link folgen Meta-Taste</span><br>
+	  <span>Link in neuen Tab Meta-Taste</span><br>
+	  <span>Link in neuen Hintergrund-Tab Meta-Taste</span><br>
+	  <span>Link in Incognito-Tab Meta-Taste</span><br>
+	  <span>Link in Hintergrund-Incognito-Tab Meta-Taste</span><br>
+	  <span id="metakeys-description">(der Link wird bei d&uuml;rcken der ausgew&auml;hlten Taste und des Link hints im jeweiligen Modus ge&ouml;ffnet)<span/>
+	</div>
+
+	<div id="metakeys">
+	  <br>
+	  <script language="javascript">
+	    function deactivatef(deactivatetype, caller) {
+	      var names = ['follow', 'newtab', 'newbacktab', 'incognito', 'backincognito'];
+	      var name;
+	      for (name in names) {
+		 if (names[name] != deactivatetype) {
+		    if (document.getElementById(names[name]+caller).checked) {
+			document.getElementById(names[name]+caller).checked = false;
+			document.getElementById(names[name]+'deactivated').checked = true;
+		    }
+		 }
+	      }
+	    }
+	  </script>
+	  <input name="defaultopen" type="radio" value="followstrg" id="followstrg" onclick="deactivatef('follow','strg')">Strg  
+	  <input name="defaultopen" type="radio" value="followalt" id="followalt" onclick="deactivatef('follow','alt')">Alt  
+	  <input name="defaultopen" type="radio" value="followshift" id="followshift" onclick="deactivatef('follow','shift')">Shift  
+	  <input name="defaultopen" type="radio" value="followdeactivated" id="followdeactivated" >Deaktiviert
+	  <br>
+	  <input name="defaultnewtab" type="radio" value="newtabstrg" id="newtabstrg" onclick="deactivatef('newtab','strg')">Strg  
+	  <input name="defaultnewtab" type="radio" value="newtabalt" id="newtabalt" onclick="deactivatef('newtab','alt')">Alt  
+	  <input name="defaultnewtab" type="radio" value="newtabshift" id="newtabshift" onclick="deactivatef('newtab','shift')">Shift  
+	  <input name="defaultnewtab" type="radio" value="newtabdeactivated" id="newtabdeactivated">Deaktiviert
+	  <br>
+	  <input name="defaultnewbacktab" type="radio" value="newbacktabstrg" id="newbacktabstrg" onclick="deactivatef('newbacktab','strg')">Strg  
+	  <input name="defaultnewbacktab" type="radio" value="newbacktabalt" id="newbacktabalt" onclick="deactivatef('newbacktab','alt')">Alt  
+	  <input name="defaultnewbacktab" type="radio" value="newbacktabshift" id="newbacktabshift" onclick="deactivatef('newbacktab','shift')">Shift  
+	  <input name="defaultnewbacktab" type="radio" value="newbacktabdeactivated" id="newbacktabdeactivated">Deaktiviert
+	  <br>
+	  <input name="defaultincognito" type="radio" value="incognitostrg" id="incognitostrg" onclick="deactivatef('incognito','strg')">Strg  
+	  <input name="defaultincognito" type="radio" value="incognitoalt" id="incognitoalt" onclick="deactivatef('incognito','alt')">Alt  
+	  <input name="defaultincognito" type="radio" value="incognitoshift" id="incognitoshift" onclick="deactivatef('incognito','shift')">Shift  
+	  <input name="defaultincognito" type="radio" value="incognitodeactivated" id="incognitodeactivated">Deaktiviert
+	  <br>
+	  <input name="defaultbackincognito" type="radio" value="backincognitostrg" id="backincognitostrg" onclick="deactivatef('backincognito','strg')">Strg  
+	  <input name="defaultbackincognito" type="radio" value="backincognitobalt" id="backincognitoalt" onclick="deactivatef('backincognito','alt')">Alt  
+	  <input name="defaultbackincognito" type="radio" value="backincognitoshift" id="backincognitoshift" onclick="deactivatef('backincognito','shift')">Shift  
+	  <input name="defaultbackincognito" type="radio" value="backincognitodeactivated" id="backincognitodeactivated">Deaktiviert
+	</div>
+
+	<div id="keys">
+	  <div id="keys-title">
+	    <span>Link-hint Zeichen: <span/>
+	    <input maxlength="10" name="keycode" size="10" type="text" /><br>
+	    <span id="keys-description">(die eingegebenen Zeichen werden f&uuml;r die Erstellung der Link-Hints verwendet)<span/>
+	  </div>
+	  
+	</div>
+    </div>
+  </body>
 </html>
