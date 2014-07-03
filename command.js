@@ -2,7 +2,8 @@ onKeydown = function(event) {
   if (event.ctrlKey && String.fromCharCode(event.keyCode) === "M") {
     LinkHints.activateMode();
   } else if (LinkHints.isActive) {
-    LinkHints.onKeyDownInMode(LinkHints.hintMarkers, event)
+    if(16 > event.keyCode || event.keyCode > 18)
+      LinkHints.onKeyDownInMode(LinkHints.hintMarkers, event)
     event.preventDefault();
     event.stopPropagation();
   } 

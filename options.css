@@ -19,4 +19,4 @@
 
 #hint-title, #metakeys-title, #keys-title, #hotkey {height:22px;font-size:17px;}
 #hotkey-description, #defaultopener-description, #keys-description {font-size:11px;}
-#metakeys-description {position:absolute; margin-top:6px; width:800px; font-size:11px;}
+#metakeys-descriptiontext {position:absolute; margin-top:6px; width:800px; font-size:11px;}
