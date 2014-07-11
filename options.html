@@ -12,7 +12,7 @@
     <div id="main">
 	<div id="hotkey">
 	  <span>Link-Hints aufrufen Tastenkombination:<span/>
-	  <input name="strg" type="checkbox" id="keycombStrg" onclick="toggleradio('keystrg')" /> Strg + 
+	  <input name="strg" type="checkbox" id="keycombStrg" /> Strg + 
 	  <input name="alt" type="checkbox" id="keycombAlt" /> Alt + 
 	  <input name="shift" type="checkbox" id="keycombShift" /> Shift + 
 	  <input maxlength="1" name="keycode" size="1" type="text" id="keycombKeycode" />
@@ -25,11 +25,11 @@
 	  <div id="hint-title">
 	    <span>Link-Hint Standartverhalten:<span/><br>
 	  </div>
-	  <input name="defaultmode" type="radio" value="follow" id="follow" onclick="deactivateDefault('follow')">Link im selben Tab &ouml;ffnen<br>
-	  <input name="defaultmode" type="radio" value="newtab" id="newtab" onclick="deactivateDefault('newtab')">Link in neuen Tab &ouml;ffnen<br>
-	  <input name="defaultmode" type="radio" value="newbacktab" id="newbacktab" onclick="deactivateDefault('newbacktab')">Link in neuen Hintergrund-Tab &ouml;ffnen<br>
-	  <input name="defaultmode" type="radio" value="incognito" id="incognito" onclick="deactivateDefault('incognito')">Link in Incognito-Tab &ouml;ffnen<br>
-	  <input name="defaultmode" type="radio" value="backincognito" id="backincognito" onclick="deactivateDefault('backincognito')">Link in Hintergrund-Incognito-Tab &ouml;ffnen<br>
+	  <input name="defaultmode" type="radio" value="follow" id="follow">Link im selben Tab &ouml;ffnen<br>
+	  <input name="defaultmode" type="radio" value="newtab" id="newtab">Link in neuen Tab &ouml;ffnen<br>
+	  <input name="defaultmode" type="radio" value="newbacktab" id="newbacktab">Link in neuen Hintergrund-Tab &ouml;ffnen<br>
+	  <input name="defaultmode" type="radio" value="incognito" id="incognito">Link in Incognito-Tab &ouml;ffnen<br>
+	  <input name="defaultmode" type="radio" value="backincognito" id="backincognito">Link in Hintergrund-Incognito-Tab &ouml;ffnen<br>
 	  <span id="defaultopener-description">(der Link wird bei erfolgter Eingabe des Link-hints im ausgew&auml;hlten modus ge&ouml;ffnet)<span/>
 	</div>
 
@@ -47,34 +47,34 @@
 
 	<div id="metakeys">
 	  <br>
-	  <div id="follow">
-	    <input name="defaultopen" type="radio" id="followstrg" onclick="deactivateMetakey('follow','strg')">Strg  
-	    <input name="defaultopen" type="radio" id="followalt" onclick="deactivateMetakey('follow','alt')">Alt  
-	    <input name="defaultopen" type="radio" id="followshift" onclick="deactivateMetakey('follow','shift')">Shift  
+	  <div id="followcol">
+	    <input name="defaultopen" type="radio" id="followstrg">Strg  
+	    <input name="defaultopen" type="radio" id="followalt">Alt  
+	    <input name="defaultopen" type="radio" id="followshift">Shift  
 	    <input name="defaultopen" type="radio" id="followdeactivated" >Deaktiviert
 	  </div>
 	  <div id="newtab">
-	    <input name="defaultnewtab" type="radio" id="newtabstrg" onclick="deactivateMetakey('newtab','strg')">Strg  
-	    <input name="defaultnewtab" type="radio" id="newtabalt" onclick="deactivateMetakey('newtab','alt')">Alt  
-	    <input name="defaultnewtab" type="radio" id="newtabshift" onclick="deactivateMetakey('newtab','shift')">Shift  
+	    <input name="defaultnewtab" type="radio" id="newtabstrg">Strg  
+	    <input name="defaultnewtab" type="radio" id="newtabalt">Alt  
+	    <input name="defaultnewtab" type="radio" id="newtabshift">Shift  
 	    <input name="defaultnewtab" type="radio" id="newtabdeactivated">Deaktiviert
 	  </div>
 	  <div id="newbacktab">
-	    <input name="defaultnewbacktab" type="radio" id="newbacktabstrg" onclick="deactivateMetakey('newbacktab','strg')">Strg  
-	    <input name="defaultnewbacktab" type="radio" id="newbacktabalt" onclick="deactivateMetakey('newbacktab','alt')">Alt  
-	    <input name="defaultnewbacktab" type="radio" id="newbacktabshift" onclick="deactivateMetakey('newbacktab','shift')">Shift  
+	    <input name="defaultnewbacktab" type="radio" id="newbacktabstrg">Strg  
+	    <input name="defaultnewbacktab" type="radio" id="newbacktabalt">Alt  
+	    <input name="defaultnewbacktab" type="radio" id="newbacktabshift">Shift  
 	    <input name="defaultnewbacktab" type="radio" id="newbacktabdeactivated">Deaktiviert
 	  </div>
 	  <div id="incognito">
-	    <input name="defaultincognito" type="radio" id="incognitostrg" onclick="deactivateMetakey('incognito','strg')">Strg  
-	    <input name="defaultincognito" type="radio" id="incognitoalt" onclick="deactivateMetakey('incognito','alt')">Alt  
-	    <input name="defaultincognito" type="radio" id="incognitoshift" onclick="deactivateMetakey('incognito','shift')">Shift  
+	    <input name="defaultincognito" type="radio" id="incognitostrg">Strg  
+	    <input name="defaultincognito" type="radio" id="incognitoalt">Alt  
+	    <input name="defaultincognito" type="radio" id="incognitoshift">Shift  
 	    <input name="defaultincognito" type="radio" id="incognitodeactivated">Deaktiviert
 	  </div>
 	  <div id="backincognito">
-	    <input name="defaultbackincognito" type="radio" id="backincognitostrg" onclick="deactivateMetakey('backincognito','strg')">Strg  
-	    <input name="defaultbackincognito" type="radio" id="backincognitoalt" onclick="deactivateMetakey('backincognito','alt')">Alt  
-	    <input name="defaultbackincognito" type="radio" id="backincognitoshift" onclick="deactivateMetakey('backincognito','shift')">Shift  
+	    <input name="defaultbackincognito" type="radio" id="backincognitostrg">Strg  
+	    <input name="defaultbackincognito" type="radio" id="backincognitoalt">Alt  
+	    <input name="defaultbackincognito" type="radio" id="backincognitoshift">Shift  
 	    <input name="defaultbackincognito" type="radio" id="backincognitodeactivated">Deaktiviert
 	  </div>
 	</div>
