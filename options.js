@@ -128,38 +128,6 @@ function loadAll() {
   });
   
 }
-
-function loadLinkHintDefault (func) {
-    chrome.storage.sync.get({
-    linkhintdefault: 'follow'
-  }, func)
-}
-
-function loadHintChars(func) {
-  chrome.storage.sync.get({
-    hintchars: 'sadfjklewcmpgh'
-  }, func)
-}
-
-function loadKeycombination(func) {
-  var strg, alt, shift, key;
-  chrome.storage.sync.get({
-    keycombStrg: true,
-    keycombAlt: false,
-    keycombShift: false,
-    keycombKeycode: 'M'
-  }, func);
-}
-
-function loadLinkMetaKey(func) {
-  chrome.storage.sync.get({
-    metakeyfollow: "",
-    metakeynewtab: "",
-    metakeynewbacktab: "",
-    metakeyincognito: "",
-    metakeybackincognito: ""
-  }, func);  
-}
 /********************* eventhandlers for onclick ******************/
 
 window.onload = function() {

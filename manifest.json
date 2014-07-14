@@ -13,7 +13,7 @@
   "content_scripts": [
 	{
 		"matches": ["<all_urls>"],
-		"js" : ["lib/keyboard_utils.js", "lib/dom_utils.js", "link_hints.js", "command.js"],
+		"js" : ["lib/keyboard_utils.js", "lib/dom_utils.js", "lib/settings.js", "link_hints.js", "command.js"],
 		"css": ["vimium.css"],
 		"run_at": "document_start",
 		"all_frames": true
