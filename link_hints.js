@@ -87,7 +87,7 @@
           });
         };
       } else if (this.mode === COPY_LINK_URL) {
-        HUD.show("Copy link URL to Clipboard");
+        //HUD.show("Copy link URL to Clipboard");
         return this.linkActivator = function(link) {
           return chrome.runtime.sendMessage({
             handler: "copyToClipboard",
@@ -95,7 +95,7 @@
           });
         };
       } else if (this.mode === OPEN_INCOGNITO) {
-        HUD.show("Open link in incognito window");
+        //HUD.show("Open link in incognito window");
         return this.linkActivator = function(link) {
           return chrome.runtime.sendMessage({
             handler: 'openUrlInIncognito',

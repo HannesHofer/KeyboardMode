@@ -94,8 +94,6 @@ function saveAll() {
   storeHintChars();
 }
 
-
-
 function loadAll() {
   loadHintChars(function(items) {
     document.getElementById('hintchars').value = items.hintchars
@@ -135,7 +133,7 @@ window.onload = function() {
   document.getElementById('newtab').onclick = function(){deactivateDefault('newtab',false);}
   document.getElementById('newbacktab').onclick = function(){ deactivateDefault('newbacktab',false);}
   document.getElementById('incognito').onclick = function(){ deactivateDefault('incognito',false);}
-  document.getElementById('backincognito').onclick = function(){ deactivateDefault('backincognito',false);}
+  //document.getElementById('backincognito').onclick = function(){ deactivateDefault('backincognito',false);}
 
   document.getElementById('followstrg').onclick = function(){ deactivateMetakey('follow','strg');}
   document.getElementById('followalt').onclick = function(){ deactivateMetakey('follow','alt');}
@@ -149,9 +147,9 @@ window.onload = function() {
   document.getElementById('incognitostrg').onclick = function(){ deactivateMetakey('incognito','strg');}
   document.getElementById('incognitoalt').onclick = function(){ deactivateMetakey('incognito','alt');}
   document.getElementById('incognitoshift').onclick = function(){ deactivateMetakey('incognito','shift');}
-  document.getElementById('backincognitostrg').onclick = function(){ deactivateMetakey('backincognito','strg');}
-  document.getElementById('backincognitoalt').onclick = function(){ deactivateMetakey('backincognito','alt');}
-  document.getElementById('backincognitoshift').onclick = function(){ deactivateMetakey('backincognito','shift');}
+ // document.getElementById('backincognitostrg').onclick = function(){ deactivateMetakey('backincognito','strg');}
+ // document.getElementById('backincognitoalt').onclick = function(){ deactivateMetakey('backincognito','alt');}
+ // document.getElementById('backincognitoshift').onclick = function(){ deactivateMetakey('backincognito','shift');}
   
   document.getElementById('hintchars').oninput = function(){ storeHintChars();}
   document.getElementById('keycombKeycode').oninput = function(){ storeKeycombination();}
