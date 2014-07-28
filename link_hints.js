@@ -45,6 +45,24 @@
     activateModeToOpenIncognito: function() {
       return this.activateMode(OPEN_INCOGNITO);
     },
+    setModeToOpenInNewTab: function() {
+      this.setOpenLinkMode(OPEN_IN_NEW_BG_TAB);
+    },
+    setModeToOpenInNewForegroundTab: function() {
+      this.setOpenLinkMode(OPEN_IN_NEW_FG_TAB);
+    },
+    setModeToCopyLinkUrl: function() {
+      this.setOpenLinkMode(COPY_LINK_URL);
+    },
+    setModeWithQueue: function() {
+      this.setOpenLinkMode(OPEN_WITH_QUEUE);
+    },
+    setModeToOpenIncognito: function() {
+      this.setOpenLinkMode(OPEN_INCOGNITO);
+    },
+    setMode: function() {
+      this.setOpenLinkMode();
+    },
     activateMode: function(mode) {
       var el;
       if (mode == null) {
