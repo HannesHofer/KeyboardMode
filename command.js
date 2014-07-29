@@ -20,7 +20,7 @@ onKeydown = function(event) {
     event.stopPropagation();
   }
 }
-xt
+
 /*************** load settings ***************/
 loadHintChars(function(items) { settings.set("linkHintCharacters", items.hintchars);});
 loadKeycombination(function(items) {
@@ -30,20 +30,20 @@ loadKeycombination(function(items) {
   settings.set("linkHintKey", items.keycombKeycode);
 });
 loadLinkHintDefault(function(items) {
-  //TODO do this with MAP and SWITCH?
   //if (items.linkhintdefault === "follow") LinkHints.activateMode();
   if (items.linkhintdefault === "newtab") activateLinkHints = function() { LinkHints.activateModeToOpenInNewForegroundTab(); }
   else if (items.linkhintdefault === "newbacktab") activateLinkHints = function() { LinkHints.activateModeToOpenInNewTab(); }
   else if (items.linkhintdefault === "incognito") activateLinkHints = function() { LinkHints.activateModeToOpenIncognito(); }
-  //else if (items.linkhintdefault === "backincognito") LinkHints.
+  else if (items.linkhintdefault === "newwindow") activateLinkHints = function() { LinkHints.activateModeToOpenInNewWindow(); }
 });
 
 function getFunctionfromType(type) { 
   // return correct function for name
   if (type == "metakeyfollow") return function() { LinkHints.setMode(); };
-  if (type == "metakeynewtab") return function() { LinkHints.setModeToOpenInNewForegroundTab(); };
-  if (type == "metakeynewbacktab") return function() { LinkHints.setModeToOpenInNewTab(); };
-  if (type == "metakeyincognito") return function() { LinkHints.setModeToOpenIncognito(); };
+  else if (type == "metakeynewtab") return function() { LinkHints.setModeToOpenInNewForegroundTab(); };
+  else if (type == "metakeynewbacktab") return function() { LinkHints.setModeToOpenInNewTab(); };
+  else if (type == "metakeyincognito") return function() { LinkHints.setModeToOpenIncognito(); };
+  else if (type == "metakeynewwindow") return function() { LinkHints.setModeToOpenInNewWindow(); }; 
   
   return function(){};
 }

@@ -30,7 +30,7 @@
 	  <input name="defaultmode" type="radio" value="newtab" id="newtab">Link in neuen Tab &ouml;ffnen<br>
 	  <input name="defaultmode" type="radio" value="newbacktab" id="newbacktab">Link in neuen Hintergrund-Tab &ouml;ffnen<br>
 	  <input name="defaultmode" type="radio" value="incognito" id="incognito">Link in Incognito-Tab &ouml;ffnen<br>
-	 <!-- <input name="defaultmode" type="radio" value="backincognito" id="backincognito" onclick="deactivateDefault('backincognito')">Link in Hintergrund-Incognito-Tab &ouml;ffnen<br> -->
+	  <input name="defaultmode" type="radio" value="newwindow" id="newwindow">Link in neuen Fenster &ouml;ffnen<br>
 	  <span id="defaultopener-description">(der Link wird bei erfolgter Eingabe des Link-hints im ausgew&auml;hlten modus ge&ouml;ffnet)<span/>
 	</div>
 
@@ -39,10 +39,10 @@
 	    <span id="meta-title">Link &ouml;ffnen Meta-Taste:<span/><br>
 	  </div>
 	  <div id="followtext">Link folgen Meta-Taste</div>
-	  <div id="newtabtext">Link in neuen Tab Meta-Taste</div>
-	  <div id="newbacktabtext">Link in neuen Hintergrund-Tab Meta-Taste</div>
-	  <div id="incognitotext">Link in Incognito-Tab Meta-Taste</div>
-	  <!-- <div id="backincognitotext">Link in Hintergrund-Incognito-Tab Meta-Taste</div> -->
+	  <div id="newtabtext">Link in neuen Tab &ouml;ffnen Meta-Taste</div>
+	  <div id="newbacktabtext">Link in neuen Hintergrund-Tab &ouml;ffnen Meta-Taste</div>
+	  <div id="newwindowtext">Link in neuen Fenster &ouml;ffnen Meta-Taste</div>
+	  <div id="incognitotext">Link in Incognito Fenster &ouml;ffnen Meta-Taste</div>
 	  <span id="metakeys-descriptiontext">(der Link wird bei d&uuml;rcken der ausgew&auml;hlten Taste und des Link hints im jeweiligen Modus ge&ouml;ffnet)<span/>
 	</div>
 
@@ -66,18 +66,18 @@
 	    <input name="defaultnewbacktab" type="radio" id="newbacktabshift">Shift  
 	    <input name="defaultnewbacktab" type="radio" id="newbacktabdeactivated">Deaktiviert
 	  </div>
+	  <div id="newwindow">
+	    <input name="defaultnewwindow" type="radio" id="newwindowstrg">Strg
+	    <input name="defaultnewwindow" type="radio" id="newwindowalt">Alt
+	    <input name="defaultnewwindow" type="radio" id="newwindowshift">Shift
+	    <input name="defaultnewwindow" type="radio" id="newwindowdeactivated">Deaktiviert
+	  </div>
 	  <div id="incognito">
 	    <input name="defaultincognito" type="radio" id="incognitostrg">Strg  
 	    <input name="defaultincognito" type="radio" id="incognitoalt">Alt  
 	    <input name="defaultincognito" type="radio" id="incognitoshift">Shift  
 	    <input name="defaultincognito" type="radio" id="incognitodeactivated">Deaktiviert
 	  </div>
-	  <!-- <div id="backincognito">
-	    <input name="defaultbackincognito" type="radio" id="backincognitostrg">Strg
-	    <input name="defaultbackincognito" type="radio" id="backincognitoalt">Alt
-	    <input name="defaultbackincognito" type="radio" id="backincognitoshift">Shift
-	    <input name="defaultbackincognito" type="radio" id="backincognitodeactivated">Deaktiviert
-	  </div> -->
 	</div>
 
 	<div id="keys">

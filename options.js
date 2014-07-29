@@ -1,5 +1,5 @@
 function deactivateMetakey(deactivatetype, caller) {
-  var names = ['follow', 'newtab', 'newbacktab', 'incognito', 'backincognito'];
+  var names = ['follow', 'newtab', 'newbacktab', 'newwindow', 'incognito'];
   var name;
   for (name in names) {
     if (names[name] != deactivatetype) {
@@ -13,7 +13,7 @@ function deactivateMetakey(deactivatetype, caller) {
 }
 
 function deactivateDefault(def, nosave) {
-  var names = ['follow', 'newtab', 'newbacktab', 'incognito', 'backincognito'];
+  var names = ['follow', 'newtab', 'newbacktab', 'newwindow', 'incognito'];
   var types = ['strg', 'alt', 'shift', 'deactivated']
   /*********** deactivate impossible options ************/
   for (name in names) {
@@ -57,26 +57,26 @@ function storeLinkHintDefault() {
 }
 
 function storeLinkMetaKey() {
-  var follow, newtab, newbacktab, incognito, backincognito;
+  var follow, newtab, newbacktab, incognito, newwindow;
   follow = document.querySelector('input[name = "defaultopen"]:checked');
   newtab = document.querySelector('input[name = "defaultnewtab"]:checked');
   newbacktab = document.querySelector('input[name = "defaultnewbacktab"]:checked');
   incognito = document.querySelector('input[name = "defaultincognito"]:checked');
-  backincognito = document.querySelector('input[name = "defaultbackincognito"]:checked');
+  newwindow = document.querySelector('input[name = "defaultnewwindow"]:checked');
   
   
   follow = (follow === null) ? "" : follow.id;
   newtab = (newtab === null) ? "" : newtab.id;
   newbacktab = (newbacktab === null) ? "" : newbacktab.id;
   incognito = (incognito === null) ? "" : incognito.id;
-  backincognito = (backincognito === null) ? "" : backincognito.id;
+  newwindow = (newwindow === null) ? "" : newwindow.id;
   
   chrome.storage.sync.set({
     metakeyfollow: follow,
     metakeynewtab: newtab,
     metakeynewbacktab: newbacktab,
     metakeyincognito: incognito,
-    metakeybackincognito: backincognito
+    metakeynewwindow: newwindow
   }, null);
 }
 
@@ -120,8 +120,8 @@ function loadAll() {
       document.getElementById(items.metakeynewbacktab).checked = true;
     if (items.metakeyincognito != "")
       document.getElementById(items.metakeyincognito).checked = true;
-    if (items.metakeybackincognito != "")
-      document.getElementById(items.metakeybackincognito).checked = true;
+    if (items.metakeynewwindow != "")
+      document.getElementById(items.metakeynewwindow).checked = true;
     
   });
   
@@ -133,7 +133,7 @@ window.onload = function() {
   document.getElementById('newtab').onclick = function(){deactivateDefault('newtab',false);}
   document.getElementById('newbacktab').onclick = function(){ deactivateDefault('newbacktab',false);}
   document.getElementById('incognito').onclick = function(){ deactivateDefault('incognito',false);}
-  //document.getElementById('backincognito').onclick = function(){ deactivateDefault('backincognito',false);}
+  document.getElementById('newwindow').onclick = function(){ deactivateDefault('newwindow',false);}
 
   document.getElementById('followstrg').onclick = function(){ deactivateMetakey('follow','strg');}
   document.getElementById('followalt').onclick = function(){ deactivateMetakey('follow','alt');}
@@ -147,9 +147,9 @@ window.onload = function() {
   document.getElementById('incognitostrg').onclick = function(){ deactivateMetakey('incognito','strg');}
   document.getElementById('incognitoalt').onclick = function(){ deactivateMetakey('incognito','alt');}
   document.getElementById('incognitoshift').onclick = function(){ deactivateMetakey('incognito','shift');}
- // document.getElementById('backincognitostrg').onclick = function(){ deactivateMetakey('backincognito','strg');}
- // document.getElementById('backincognitoalt').onclick = function(){ deactivateMetakey('backincognito','alt');}
- // document.getElementById('backincognitoshift').onclick = function(){ deactivateMetakey('backincognito','shift');}
+  document.getElementById('newwindowstrg').onclick = function(){ deactivateMetakey('newwindow','strg');}
+  document.getElementById('newwindowalt').onclick = function(){ deactivateMetakey('newwindow','alt');}
+  document.getElementById('newwindowshift').onclick = function(){ deactivateMetakey('newwindow','shift');}
   
   document.getElementById('hintchars').oninput = function(){ storeHintChars();}
   document.getElementById('keycombKeycode').oninput = function(){ storeKeycombination();}
