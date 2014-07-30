@@ -3,12 +3,15 @@ var metakey = {};
 //activateLinkHints = function() { LinkHints.activateModeToOpenIncognito(); }
 
 onKeydown = function(event) {
-  if ( (event.ctrlKey || !settings.get("ctrlKeyConfigured")) && 	// check for ctrl key if configured
+/*
+ * THIS IS DONE BY CHROME KEYBINDING API NOW
+   if ( (event.ctrlKey || !settings.get("ctrlKeyConfigured")) && 	// check for ctrl key if configured
        (event.altKey  || !settings.get("altKeyConfigured")) && 		// check for alt key if configured
        (event.shiftKey || !settings.get("shiftKeyConfigured")) && 	// check for shift key if configured
         String.fromCharCode(event.keyCode) == settings.get("linkHintKey").toUpperCase()) { // check for configured KeyCode
     activateLinkHints();
-  } else if (LinkHints.isActive) { 
+  } else */
+  if (LinkHints.isActive) { 
     if(16 > event.keyCode || event.keyCode > 18) {
       // check for modifier Keys
       if (event.ctrlKey) metakey["strg"]();
@@ -64,6 +67,14 @@ loadLinkMetaKey(function(items) {
 });
 
 /*************** load settings ***************/
+
+
+chrome.extension.onMessage.addListener(function(msg, sender, sendResponse) {
+  if (msg.action == 'open_link_hints') {
+    activateLinkHints();
+  }
+});
+
 
 
 settings.set("linkHintNumbers", "0123456789"); //TODO: do we need this?

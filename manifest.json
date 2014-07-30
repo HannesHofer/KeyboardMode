@@ -5,7 +5,6 @@
   "icons": {"128": "icon.png"},
   "version": "1.0",
   "options_page": "options.html",
-
   "permissions": [
     "<all_urls>",
     "tabs",
@@ -14,6 +13,15 @@
   "background": {
     "persistent": false,
     "scripts": ["lib/background.js"]
+  },
+  "commands": {
+    "activate_link_hints": {
+      "suggested_key": {
+        "default": "Ctrl+M",
+        "mac": "Command+M"
+      },
+      "description": "Link Hints anzeigen"
+    }
   },
   "content_scripts": [
 	{
