@@ -27,7 +27,7 @@
 	{
 		"matches": ["<all_urls>"],
 		"js" : ["lib/keyboard_utils.js", "lib/dom_utils.js", "lib/option_utils.js", "link_hints.js", "command.js"],
-		"css": ["vimium.css"],
+		"css": ["keyboardmode.css"],
 		"run_at": "document_start",
 		"all_frames": true
 	}
